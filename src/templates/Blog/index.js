@@ -7,11 +7,11 @@ import SidebarForBlog from "../SidebarForBlog";
 const BlogPage = ({sidebar_position,blog_type,sidebar}) => {
     return (
         <Fragment>
-            <PageHeader
+            {/* <PageHeader
                 bgImg={require('../../assets/img/page-header.jpg')}
                 title={'From Businex Latest'}
                 content={'Businex always try to provide the best Business Solutions for Clients to grow up their Business very sharply and smoothly.'}
-            />
+            /> */}
 
             <PageWrapper classes={'blog-page-content-area sp-y'}>
                 {sidebar === true && sidebar_position === 'left' ? <SidebarForBlog classes={'order-1 order-lg-0'}/> : null}
