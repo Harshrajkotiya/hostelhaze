@@ -15,7 +15,7 @@ const About = () => (
                 </div>
 
                 <div className="col-md-6 col-lg-7">
-                    <Content classes="about-content">
+                    <Content classes="HARSH">
                         <h6>{aboutData.title}</h6>
                         <h2>{parse(aboutData.heading)}</h2>
                         <span className="about-since">{aboutData.since}</span>

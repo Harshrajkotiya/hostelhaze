@@ -22,6 +22,7 @@ import Contact from "./pages/Contact";
 import Error404 from "./pages/Error404";
 import ScrollToTop from "./helpers/ScrollToTop";
 import Posts from './pages/Posts';
+import PostRequest from './pages/PostRequest';
 
 const App = () => {
     return (
@@ -33,6 +34,7 @@ const App = () => {
                     <Route exact path={`${process.env.PUBLIC_URL + '/home-two'}`} component={HomeTwo}/>
                     <Route exact path={`${process.env.PUBLIC_URL + '/services'}`} component={Service}/>
                     <Route exact path={`${process.env.PUBLIC_URL + '/posts'}`} component={Posts}/>
+                    <Route exact path={`${process.env.PUBLIC_URL + '/postsrequest'}`} component={PostRequest}/>
 
                     <Route path={`${process.env.PUBLIC_URL + '/service/:serviceID'}`} component={ServiceDetails}/>
                     <Route exact path={`${process.env.PUBLIC_URL + "/blog-grid-right-sidebar"}`}

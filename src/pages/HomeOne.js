@@ -14,7 +14,6 @@ import Footer from "../components/Footer";
 import Testimonials from "../components/Testimonials/home-one";
 import LoginRegister from "../components/LoginRegister";
 import MobileMenu from "../components/MobileMenu";
-
 const HomeOne = () => {
     return (
         <Fragment>
