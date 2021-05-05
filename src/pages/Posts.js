@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from "react";
 import Header from "../components/Header";
-import BlogPage from "../templates/Blog";
 import Footer from "../components/Footer";
 import LoginRegister from "../components/LoginRegister";
 import MobileMenu from "../components/MobileMenu";
@@ -20,81 +19,159 @@ const postsdatajson = [
 ];
 
 export class Posts extends Component {
+ 
   state = {
     posts: [],
     loading: true,
   };
 
+  onnewpostclick() {
+    this.props.history.push('PostRequest')
+  }
   componentDidMount() {
-    $('#exampleModal').on('show.bs.modal', function (event) {
-      var button = $(event.relatedTarget) // Button that triggered the modal
-      var recipient = button.data('whatever') // Extract info from data-* attributes
-      // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-      // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-      var modal = $(this)
-      modal.find('.modal-title').text('New message to ' + recipient)
-      modal.find('.modal-body input').val(recipient)
-    })
-    console.log("Component did mount started");
-    fire
-      .firestore()
-      .collection("posts")
-      .get()
-      .then((querySnapshot) => {
-        var tempposts = [];
-        querySnapshot.forEach((doc) => {
-          console.log(doc.data());
-          tempposts.push(doc.data());
+    let user = JSON.parse(localStorage.getItem("user"));
+    if (user) {
+      console.log("Inside Posts! and User exists", user);
+      console.log("Component did mount started");
+
+      fire
+        .firestore()
+        .collection("posts")
+        .get()
+        .then((querySnapshot) => {
+          var tempposts = [];
+          querySnapshot.forEach((doc) => {
+            console.log(doc.data() , doc.id);
+            let obj = doc.data()
+            obj["id"] = doc.id
+            tempposts.push(obj);
+          });
+          console.log("TempPost", tempposts);
+          this.setState({
+            loading: false,
+            posts: tempposts,
+          });
         });
-        console.log("TempPost", tempposts);
-        this.setState({
-          loading: false,
-          posts: tempposts,
-        });
-      });
+        
+    } else {
+      this.props.history.replace("login");
+    }
   }
 
   render() {
+    
     const postsdata = postsdatajson;
     var PostHTML;
     if (this.state.loading) {
-      PostHTML = <div> Loading Please wait......</div>;
+      PostHTML = <div> Loading Please wait......
+      </div>;
     } else {
       PostHTML = (
-        <div className="container">
+        <div className="container"
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          marginTop: "20px",
+        }}>
           <div className="row">
+            
             {this.state.posts.map((post) => {
               return (
-                <PostItem title={post.title} description={post.description} />
+                
+                <PostItem post={post} />
               );
             })}
           </div>
         </div>
       );
+      
     }
     return (
       <Fragment>
-        <Header />
+        <Header {...this.props}/>
+        
         <div
           className="container"
           style={{
             display: "flex",
             justifyContent: "center",
-            marginBottom: "20px",
+            marginTop: "50px",
           }}
         >
-          sajflkasjfalksf
-        </div>
+        
         <button
           type="button"
-          className="btn btn-primary"
+          className="btn btn-outline-dark"
+          onClick={this.onnewpostclick.bind(this)}
         >
-          Open modal for @getbootstrap
+          +
         </button>
+        </div>
 
+        <div
+          className="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div className="modal-dialog" role="document">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h5 className="modal-title" id="exampleModalLabel">
+                  New message
+                </h5>
+                <button
+                  type="button"
+                  className="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div className="modal-body">
+                <form>
+                  <div className="form-group">
+                    <label for="recipient-name" className="col-form-label">
+                      Recipient:
+                    </label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      id="recipient-name"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label for="message-text" className="col-form-label">
+                      Message:
+                    </label>
+                    <textarea
+                      className="form-control"
+                      id="message-text"
+                    ></textarea>
+                  </div>
+                </form>
+              </div>
+              <div className="modal-footer">
+                <button
+                  type="button"
+                  className="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button type="button" className="btn btn-primary">
+                  Send message
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
         {PostHTML}
         {/* <BlogPage blog_type={'grid'} sidebar={false} sidebar_position={'left'}/> */}
-        <CallToAction />
+        {/* <CallToAction /> */}
         <Footer />
         <LoginRegister />
         <MobileMenu />
