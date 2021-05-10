@@ -19,26 +19,28 @@ const PageAbout = () => {
     return (
         <Fragment>
             <Header/>
+
             <PageHeader
-                bgImg={require('../assets/img/page-header.jpg')}
+            
+                bgImg={require('../assets/img/hostelpic/A1.jpg')}
                 title="ABOUT US"
-                content="Businex always try to provide the best Business Solutions for Clients to grow up their Business very sharply and smoothly."
+                content="HostelHaze always try to provide the best."
             />
             <About
                 title={'Our Team'}
-                heading="Meet Our <br/> Expert Member"
-                thumb={ServiceThumb}
-                content="<b>Businex</b> always try to provide the best Business Solutions for Clinets to grow up their Business very sharply and smoothly. We voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+                //heading="Meet Our <br/> Expert Member"
+               // thumb={ServiceThumb}
+                content="<b>HostelHaze</b> always try to provide the best."
             />
-            <Services/>
-            <Features classes={'sm-top'}/>
-            <Testimonial/>
-            <Team/>
-            <BrandLogo/>
-            <Funfact classes="sp-top"/>
-            <CallToAction/>
+            {/* <Services/> */}
+            {/* <Features classes={'sm-top'}/> */}
+            {/* <Testimonial/> */}
+            {/* <Team/> */}
+            {/* <BrandLogo/> */}
+            {/* <Funfact classes="sp-top"/> */}
+            {/* <CallToAction/> */}
             <Footer/>
-            <LoginRegister/>
+            {<LoginRegister/> }
             <MobileMenu/>
         </Fragment>
     );

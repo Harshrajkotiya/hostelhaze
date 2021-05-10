@@ -12,7 +12,7 @@ const PageContact = () => {
         <Fragment>
             <Header/>
             <ContactPage/>
-            <CallToAction/>
+            {/* <CallToAction/> */}
             <Footer/>
             <LoginRegister/>
             <MobileMenu/>

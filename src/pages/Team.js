@@ -10,27 +10,31 @@ import Footer from "../components/Footer";
 import LoginRegister from "../components/LoginRegister";
 import MobileMenu from "../components/MobileMenu";
 
-import ServiceThumb from '../assets/img/about.jpg'
+import ServiceThumb from '../assets/img/hostelpic/t2.jpg'
+
+
 
 const PageTeam = () => {
     return (
         <Fragment>
             <Header/>
             <PageHeader
-                bgImg={require('../assets/img/page-header.jpg')}
-                title="KNOW ABOUT BUSINEX THE ULTIMATE TEAM"
-                content="Businex always try to provide the best Business Solutions for Clients to grow up their Business very sharply and smoothly."
+                bgImg={require('../assets/img/hostelpic/A1.jpg')}
+                title="KNOW ABOUT HostelHaze TEAM"
+                // content="HostelHaze always try to provide the best..."
             />
             <About
-                title={'Our Team'}
-                heading="Meet Our <br/> Expert Member"
-                thumb={ServiceThumb}
-                content="<b>Businex</b> always try to provide the best Business Solutions for Clinets to grow up their Business very sharply and smoothly. We voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+                // title={'Our Team'}
+                heading="Our Team"
+                thumb={ ServiceThumb}
+                content="<b>Name:</b> Harsh Rajkotiya"
+                
             />
-            <TeamMember/>
-            <BrandLogo/>
-            <Funfact classes="sp-top"/>
-            <CallToAction/>
+            
+            {/* <TeamMember/> */}
+            {/* <BrandLogo/> */}
+            {/* <Funfact classes="sp-top"/> */}
+            {/* <CallToAction/> */}
             <Footer/>
             <LoginRegister/>
             <MobileMenu/>

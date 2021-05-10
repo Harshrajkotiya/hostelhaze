@@ -23,6 +23,15 @@ import Error404 from "./pages/Error404";
 import ScrollToTop from "./helpers/ScrollToTop";
 import Posts from './pages/Posts';
 import PostRequest from './pages/PostRequest';
+import Register from './pages/Register';
+import Login from './pages/Login';
+import NewComplainbox from './pages/NewComplainbox';
+import ComplainBox from './pages/ComplainBox';
+import StudentInfo from './pages/StudentInfo';
+import MessMenu from './pages/MessMenu';
+import MyPost from './pages/MyPost';
+import MyComplain from './pages/MyComplain';
+
 
 const App = () => {
     return (
@@ -33,8 +42,19 @@ const App = () => {
                     <Route exact path={`${process.env.PUBLIC_URL + '/home-one'}`} component={HomeOne}/>
                     <Route exact path={`${process.env.PUBLIC_URL + '/home-two'}`} component={HomeTwo}/>
                     <Route exact path={`${process.env.PUBLIC_URL + '/services'}`} component={Service}/>
+
+                    <Route exact path={`${process.env.PUBLIC_URL + '/messmenu'}`} component={MessMenu}/>
+                    <Route exact path={`${process.env.PUBLIC_URL + '/mypost'}`} component={MyPost}/>
+                    <Route exact path={`${process.env.PUBLIC_URL + '/mycomplain'}`} component={MyComplain}/>
+
+
+                    <Route exact path={`${process.env.PUBLIC_URL + '/studentinfo'}`} component={StudentInfo}/>
+                    <Route exact path={`${process.env.PUBLIC_URL + '/newcomplainbox'}`} component={NewComplainbox}/>
+                    <Route exact path={`${process.env.PUBLIC_URL + '/complainbox'}`} component={ComplainBox}/>
+                    <Route exact path={`${process.env.PUBLIC_URL + '/register'}`} component={Register}/>
+                    <Route exact path={`${process.env.PUBLIC_URL + '/login'}`} component={Login}/>
                     <Route exact path={`${process.env.PUBLIC_URL + '/posts'}`} component={Posts}/>
-                    <Route exact path={`${process.env.PUBLIC_URL + '/postsrequest'}`} component={PostRequest}/>
+                    <Route exact path={`${process.env.PUBLIC_URL + '/postrequest'}`} component={PostRequest}/>
 
                     <Route path={`${process.env.PUBLIC_URL + '/service/:serviceID'}`} component={ServiceDetails}/>
                     <Route exact path={`${process.env.PUBLIC_URL + "/blog-grid-right-sidebar"}`}

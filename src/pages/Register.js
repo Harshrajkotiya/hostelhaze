@@ -11,6 +11,12 @@ class Register extends Component {
 
   onRegisterClicked() {
     console.log("Register Button is Clicked!!!", this.state);
+    
+
+    
+
+
+
     fire
       .auth()
       .createUserWithEmailAndPassword(this.state.email, this.state.password)

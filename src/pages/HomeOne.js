@@ -20,14 +20,14 @@ const HomeOne = () => {
             <Header/>
             <Slider/>
             <About/>
-            <Features classes="sp-top"/>
-            <Services classes="sm-top-wt"/>
-            <Testimonials/>
-            <Team/>
-            <Blog/>
-            <BrandLogo/>
-            <Funfact/>
-            <CallToAction/>
+            {/* <Features classes="sp-top"/> */}
+            {/* <Services classes="sm-top-wt"/> */}
+            {/* <Testimonials/> */}
+            {/* <Team/> */}
+            {/* <Blog/> */}
+            {/* <BrandLogo/> */}
+            {/* <Funfact/> */}
+            {/* <CallToAction/> */}
             <Footer/>
             <MobileMenu/>
             <LoginRegister/>

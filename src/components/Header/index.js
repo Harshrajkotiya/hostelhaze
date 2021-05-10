@@ -6,6 +6,7 @@ import HeaderConfig from './HeaderConfig'
 class Header extends Component{
 
     componentDidMount() {
+        console.log("Inside did Mount of Header index.js" , this.props)
         window.addEventListener('scroll', this.isSticky);
     }
 
@@ -35,7 +36,7 @@ class Header extends Component{
                         </div>
 
                         <div className="col-7 col-lg-3">
-                            <HeaderConfig logRegContentShow={this.props.logRegContentShow} mobileMenuShow={this.props.mobileMenuShow} />
+                            <HeaderConfig {...this.props} logRegContentShow={this.props.logRegContentShow} mobileMenuShow={this.props.mobileMenuShow} />
                         </div>
                     </div>
                 </div>

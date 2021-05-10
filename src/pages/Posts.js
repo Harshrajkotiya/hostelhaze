@@ -37,6 +37,7 @@ export class Posts extends Component {
       fire
         .firestore()
         .collection("posts")
+        // .where('userid' , '==', user.uid)
         .get()
         .then((querySnapshot) => {
           var tempposts = [];
@@ -46,6 +47,8 @@ export class Posts extends Component {
             obj["id"] = doc.id
             tempposts.push(obj);
           });
+          console.log("temppost before sorting" , tempposts)
+          tempposts = tempposts.sort((a, b) => b.time - a.time)
           console.log("TempPost", tempposts);
           this.setState({
             loading: false,

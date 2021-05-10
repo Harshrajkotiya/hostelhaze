@@ -8,7 +8,7 @@ const PageHeader = ({bgImg,title,content}) => {
                     <div className="col-lg-10 col-xl-8 m-auto text-center">
                         <div className="page-header-content-inner">
                             <div className="page-header-content">
-                                <h2>{title}</h2>
+                                <h2 style={{color:"#100f0f"}}>{title}</h2>
                                 <p>{content}</p>
                             </div>
                         </div>

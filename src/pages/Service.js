@@ -12,29 +12,33 @@ import Footer from "../components/Footer";
 import LoginRegister from "../components/LoginRegister";
 import MobileMenu from "../components/MobileMenu";
 
-import ServiceThumb from '../assets/img/about.jpg'
+import ServiceThumb from '../assets/img/hostelpic/h7.jpg'
 
 const PageService = () => {
     return (
         <Fragment>
             <Header/>
             <PageHeader
-                bgImg={require('../assets/img/page-header.jpg')}
+                bgImg={require('../assets/img/hostelpic/h6.jpg')}
                 title="OUR SERVICES"
-                content="Businex always try to provide the best Business Solutions for Clients to grow up their Business very sharply and smoothly."
+                content="HostelHaze always try to provide the best."
             />
             <PageAbout
-                title={'Our Services'}
-                heading="Provide best <br/> Business Solutions"
+                // title={'Our Services'}
+                heading="Our Services"
                 thumb={ServiceThumb}
-                content="<b>Businex</b> always try to provide the best Business Solutions for Clinets to grow up their Business very sharply and smoothly. We voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+                content="<li>Always helpful hostel staff with current information,tips and recommendations...</li>
+                <li>Free Wi-Fi in lobby.Hotspots are avaliable in the apartments...</li>
+                <li>An Easygoing, relaxing and friendly enviroment...</li>"
+
             />
-            <Services classes="sm-top"/>
-            <PricingTable/>
-            <Testimonial/>
-            <BrandLogo/>
-            <Funfact classes="sp-top"/>
-            <CallToAction/>
+                <div style={{marginBottom:"50px"}}></div>
+            {/* <Services classes="sm-top"/> */}
+            {/* <PricingTable/> */}
+            {/* <Testimonial/> */}
+            {/* <BrandLogo/> */}
+            {/* <Funfact classes="sp-top"/> */}
+            {/* <CallToAction/> */}
             <Footer/>
             <LoginRegister/>
             <MobileMenu/>

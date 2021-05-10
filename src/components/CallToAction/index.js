@@ -15,7 +15,7 @@ function CallToAction() {
                             <p>{parse(CallToActionData.text)}</p>
                         </div>
                         <div className="col-md-4 col-lg-6 text-md-right mt-sm-25">
-                            <Link to={`${process.env.PUBLIC_URL + CallToActionData.btnLink}`} className="btn-outline">{CallToActionData.btnText}</Link>
+                            {/* <Link to={`${process.env.PUBLIC_URL + CallToActionData.btnLink}`} className="btn-outline">{CallToActionData.btnText}</Link> */}
                         </div>
                     </div>
                 </div>

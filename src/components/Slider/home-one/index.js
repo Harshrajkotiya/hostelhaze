@@ -45,9 +45,9 @@ const Slider = () => {
                                         <div className="row">
                                             <div className="col-xl-7">
                                                 <div className="slider-content">
-                                                    <h2>{item.title}</h2>
-                                                    <p>{item.text}</p>
-                                                    <Link to={`${process.env.PUBLIC_URL + item.btnLink}`} className="btn btn-brand">{item.btnText}</Link>
+                                                    <h2 style={{marginLeft:"380px"}}>{item.title}</h2>
+                                                    <p style={{marginLeft:"385px"}}>{item.text}</p>
+                                                    {/* <Link to={`${process.env.PUBLIC_URL + item.btnLink}`} className="btn btn-brand">{item.btnText}</Link> */}
                                                 </div>
                                             </div>
                                         </div>
