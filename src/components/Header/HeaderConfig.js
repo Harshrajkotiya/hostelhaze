@@ -30,6 +30,7 @@ class HeaderConfig extends Component {
   }
 
   componentDidMount() {
+      console.log("inisde did mount of Header Config", this.props)
   }
 
   render() {
@@ -51,17 +52,19 @@ class HeaderConfig extends Component {
       </a>;
     } else {
       LoggedInHTML = (
-        <div>
-          <a href="#" className="tel-no"
+        <div style={{display: 'flex', alignItems:'center'}}>
+          <div className="tel-no"
+               style={{flex:'1', whiteSpace:'nowrap'}}
           >
             {user.displayName}
        
-          </a>
+          </div>
           <button
             style={{
               color: "#FFFFFF",
               background: "#080b1a",
               textTransform: "uppercase",
+                flex:'1'
             }}
             type="button"
             className="btn btn-dark"

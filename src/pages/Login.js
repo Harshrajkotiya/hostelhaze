@@ -105,7 +105,7 @@ class Login extends Component {
             <div className="sign-up-notification">
               <p>
                 Not resister?{" "}
-                <a href="http://localhost:3000/businex/register">
+                <a href="/register">
                   Register in.
                 </a>
               </p>

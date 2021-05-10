@@ -139,7 +139,7 @@ class Register extends Component {
             <div className="sign-up-notification">
               <p>
                 Already Resisted?{" "}
-                <a href="http://localhost:3000/businex/login">Login In.</a>
+                <a href="/login">Login In.</a>
               </p>
             </div>
           </div>

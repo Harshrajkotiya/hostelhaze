@@ -14,10 +14,12 @@ import Footer from "../components/Footer";
 import Testimonials from "../components/Testimonials/home-one";
 import LoginRegister from "../components/LoginRegister";
 import MobileMenu from "../components/MobileMenu";
-const HomeOne = () => {
+const HomeOne = (props) => {
+
     return (
         <Fragment>
-            <Header/>
+            {console.log("IN HOME ONE JS the props is" , props)}
+            <Header history={props.history}/>
             <Slider/>
             <About/>
             {/* <Features classes="sp-top"/> */}

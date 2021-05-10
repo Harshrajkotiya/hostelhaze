@@ -62,16 +62,16 @@ class PostItem extends Component {
           className="card"
           style={{
             width: "100%",
-            maxWidth: "500px",
+            maxWidth: "600px",
             alignContent: "center",
             alignItems: "center",
           }}
         >
           <div
-            className="card-title"
-            style={{ marginRight: "300px", marginTop: "10px", }}
+            className=""
+            style={{  width:'100%'}}
           >
-            <h4 className="card-title"style={{fontWeight:"600"}}>{this.props.post.displayName}</h4>
+            <h5 style={{fontWeight:"600", margin:'15px'}}>{this.props.post.displayName}</h5>
           </div>
           <img src={this.props.post.imageURL || img} />
 
