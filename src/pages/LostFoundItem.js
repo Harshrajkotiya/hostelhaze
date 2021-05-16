@@ -1,12 +1,12 @@
-// import img from "../../assets/img/blog/01.jpg";
 import React, { Component } from "react";
-import fire from "../../firebase";
-import ComplainBox from "../../pages/ComplainBox";
+// import fire from "../../firebase";
+// import LostFound from './LostFound';
+// import img from "../../assets/img/blog/01.jpg";
 
-class ComplainboxItem extends Component {
+class LostFoundItem extends Component {
 
   onupdateclick() {
-    console.log("update", this.props.complain.status);
+    console.log("update", this.props.LostFound.status);
   }
   //   fire
   //     .firestore()
@@ -22,22 +22,22 @@ class ComplainboxItem extends Component {
   // }
 
   render() {
-    console.log("complain box item", this.props.complain);
+    console.log("Lost item", this.props.LostFound);
 
-    var complainstatus = "";
+    var LostFoundstatus = "";
 
-    if (this.props.complain.status == "open")
-     {      
-        complainstatus = (
+    if (this.props.LostFound.status == "open")
+     {
+        LostFoundstatus = (
           <div style={{ marginLeft: "280px" }}>
             <span className="badge bg-danger text-light" style={{ marginLeft: "100px" }} >
               Open
             </span>
           </div>
-        );      
+        ); 
     }
      else {
-      complainstatus = (
+      LostFoundstatus = (
         <div style={{ marginLeft: "280px" }}>
           <span className="badge bg-success text-light" style={{ marginLeft: "100px" }}>
             close
@@ -65,11 +65,11 @@ class ComplainboxItem extends Component {
           }}
         >
           {/* <img src={img} /> */}
-          {complainstatus}
+          {LostFoundstatus}
           <div className="card-body" style={{ "minWidth": "100%" }}>
-            <h6 className="card-title"style={{fontWeight:"600"}}>{this.props.complain.studentname}</h6>
-            <h6 className="card-title"style={{fontWeight:"500"}}>Room No:{this.props.complain.roomno}</h6>
-            <p className="card-text"style={{fontSize:"20px"}}>{this.props.complain.complaindesc}</p>
+            <h6 className="card-title"style={{fontWeight:"600"}}>{this.props.LostFound.studentname}</h6>
+            <h6 className="card-title"style={{fontWeight:"500"}}>Room No:{this.props.LostFound.roomno}</h6>
+            <p className="card-text"style={{fontSize:"20px"}}>{this.props.LostFound.lostdesc}</p>
 
             
              <button
@@ -82,7 +82,7 @@ class ComplainboxItem extends Component {
             </button>
             <div className="card-text" style={{ marginLeft: "300px" }}>
               <p className="card-text">
-                {new Date(this.props.complain.time).toLocaleString()}
+                {new Date(this.props.LostFound.time).toLocaleString()}
               </p>
             </div> 
             
@@ -94,4 +94,4 @@ class ComplainboxItem extends Component {
   }
 }
 
-export default ComplainboxItem;
+export default LostFoundItem;

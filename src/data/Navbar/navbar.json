@@ -4,13 +4,7 @@
     "title": "Home",
     "link": "/",
     "megaMenu": false,
-    "subMenu": [
-      {
-        "id": 1.1,
-        "title": "Home 01",
-        "link": "/home-one"
-      }
-    ]
+    "subMenu": false
   },
   {
     "id": 2,

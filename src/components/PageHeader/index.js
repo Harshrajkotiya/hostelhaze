@@ -9,7 +9,7 @@ const PageHeader = ({bgImg,title,content}) => {
                         <div className="page-header-content-inner">
                             <div className="page-header-content">
                                 <h2 style={{color:"#100f0f"}}>{title}</h2>
-                                <p>{content}</p>
+                                <p style={{color:"#100f0f"}}>{content}</p>
                             </div>
                         </div>
                     </div>

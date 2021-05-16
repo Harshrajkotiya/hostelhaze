@@ -29,7 +29,8 @@ const PageAbout = () => {
             <About
                 title={'Our Team'}
                 //heading="Meet Our <br/> Expert Member"
-               // thumb={ServiceThumb}
+                
+                thumb={ServiceThumb}
                 content="<b>HostelHaze</b> always try to provide the best."
             />
             {/* <Services/> */}

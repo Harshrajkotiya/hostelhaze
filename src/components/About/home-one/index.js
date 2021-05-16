@@ -16,9 +16,9 @@ const About = () => (
 
                 <div className="col-md-6 col-lg-7">
                     <Content classes="HARSH">
-                        <h6>{aboutData.title}</h6>
-                        <h2>{parse(aboutData.heading)}</h2>
-                        <span className="about-since">{aboutData.since}</span>
+                        <h2>{aboutData.title}</h2>
+                        <h3>{parse(aboutData.heading)}</h3>
+                        {/* <span className="about-since">{aboutData.since}</span> */}
                         <p>{parse(aboutData.text)}</p>
                         <Link to={`${process.env.PUBLIC_URL + aboutData.btnLink}`} className="btn-about">{aboutData.btnText} <i className="fa fa-angle-double-right"/></Link>
                     </Content>

@@ -6,27 +6,17 @@ import {Link} from "react-router-dom";
 
 const About = () => {
     return (
-        <div className="home-two-about-area" style={{backgroundImage:`url(${aboutThumb})`}}>
-            <div className="container">
-                <div className="row align-items-center">
-                    <div className="col-12 d-lg-none">
-                        <figure className="about-thumb">
-                            <img src={require('../../../assets/img/' + aboutData.thumb)} alt="Businex-About"/>
-                        </figure>
-                    </div>
-
-                    <div className="col-lg-6">
-                        <div className="about-content about-content--2">
-                            <h6>{aboutData.title}</h6>
-                            <h2>{parse(aboutData.heading)}</h2>
-                            <span className="about-since">{aboutData.since}</span>
-                            <p>{parse(aboutData.text)}</p>
-                            <Link to={`${process.env.PUBLIC_URL + aboutData.btnLink}`} className="btn-about">{aboutData.btnText} <i className="fa fa-angle-double-right"/></Link>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div className="container" style={{marginBottom:"200px"}}>
+        <div className="col-xs-9 " style={{justifyContent:"right"}} >
+            
+            <img style={{width:"50%"}}  src={aboutThumb} className="float-right"/>
+            <h2 style={{marginTop:"30px"}}>{aboutData.title}</h2>
+                       <h2>{parse(aboutData.heading)}</h2>
+                       {/* <span className="about-since">{aboutData.since}</span> */}
+                       <p className="col-lg-6">{parse(aboutData.text)}</p>
         </div>
+        </div>
+        
     );
 };
 

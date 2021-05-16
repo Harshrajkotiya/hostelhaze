@@ -11,6 +11,8 @@ import LoginRegister from "../components/LoginRegister";
 import MobileMenu from "../components/MobileMenu";
 
 import ServiceThumb from '../assets/img/hostelpic/t2.jpg'
+import ServiceThumb1 from '../assets/img/hostelpic/T3.jpg'
+import ServiceThumb2 from '../assets/img/hostelpic/T6.jpg'
 
 
 
@@ -23,13 +25,31 @@ const PageTeam = () => {
                 title="KNOW ABOUT HostelHaze TEAM"
                 // content="HostelHaze always try to provide the best..."
             />
+            <h2 style={{marginLeft:"40%",marginTop:"40px"}}>Our Team</h2>
             <About
-                // title={'Our Team'}
-                heading="Our Team"
-                thumb={ ServiceThumb}
-                content="<b>Name:</b> Harsh Rajkotiya"
+                title={'Founder & Developer'}
+                heading="Harsh Rajkotiya"
+                thumb ={ ServiceThumb}
+                content="<b>phone : </b>8733803586 </br> <b>E-mail : </b>harshrajkotiya2002@gmail.com"
+                
+                        
+
+            />
+            <About
+                title={'Founder & Co-Developer'}
+                heading="Hetvi Rajkotiya"
+                thumb={ ServiceThumb1}
+                content="<b>Phone : </b>7228850712 </br> <b>E-mail : </b>hetvirajkotiya111@gmail.com"
                 
             />
+            <About
+                title={'Founder & Co-Developer'}
+                heading="Suhas Lakhani"
+                thumb={ ServiceThumb2}
+                content="<b>phone : </b>9574491009</br> <b>E-mail : </b>lakhanisuhas10@gmail.com"
+                
+            />
+            
             
             {/* <TeamMember/> */}
             {/* <BrandLogo/> */}
