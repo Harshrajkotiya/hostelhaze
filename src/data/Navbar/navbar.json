@@ -35,17 +35,27 @@
   },
   {
     "id": 4,
-    "title": "MessMenu",
-    "link": "/messmenu",
-    "megaMenu": false,
-    "subMenu": false
-  },
-  
-  {
-    "id": 5,
-    "title": "About us",
+    "title": "About Us",
     "link": "/about",
     "megaMenu": false,
     "subMenu": false
+  },
+  {
+    "id": 5,
+    "title": "More",
+    "megaMenu": false,
+    "subMenu": [
+      {
+        "id": 5.1,
+        "title": "MessMenu",
+        "link": "/messmenu"
+      },
+      {
+        "id": 5.2,
+        "title": "Lost & Found",
+        "link": "/lostfound"
+      }
+    ]
   }
+  
 ]

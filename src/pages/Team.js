@@ -23,7 +23,6 @@ const PageTeam = () => {
             <PageHeader
                 bgImg={require('../assets/img/hostelpic/A1.jpg')}
                 title="KNOW ABOUT HostelHaze TEAM"
-                // content="HostelHaze always try to provide the best..."
             />
             <h2 style={{marginLeft:"40%",marginTop:"40px"}}>Our Team</h2>
             <About
@@ -50,11 +49,8 @@ const PageTeam = () => {
                 
             />
             
+           <div style={{marginBottom:"50px"}}/> 
             
-            {/* <TeamMember/> */}
-            {/* <BrandLogo/> */}
-            {/* <Funfact classes="sp-top"/> */}
-            {/* <CallToAction/> */}
             <Footer/>
             <LoginRegister/>
             <MobileMenu/>

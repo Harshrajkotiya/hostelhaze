@@ -192,7 +192,7 @@ export class ComplainBox extends Component {
         </div>
         {complainHTML}
         {/* <BlogPage blog_type={'grid'} sidebar={false} sidebar_position={'left'}/> */}
-        <CallToAction />
+        {/* <CallToAction /> */}
         <Footer />
         <LoginRegister />
         <MobileMenu />

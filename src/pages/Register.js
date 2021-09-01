@@ -13,10 +13,6 @@ class Register extends Component {
     console.log("Register Button is Clicked!!!", this.state);
     
 
-    
-
-
-
     fire
       .auth()
       .createUserWithEmailAndPassword(this.state.email, this.state.password)
@@ -75,7 +71,7 @@ class Register extends Component {
           style={{
             display: "flex",
             justifyContent: "center",
-            marginTop: "30px",
+            marginTop: "200px",
           }}
         >
           <div className="log-in-content-wrap">

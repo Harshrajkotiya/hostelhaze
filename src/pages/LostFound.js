@@ -5,10 +5,11 @@ import Footer from "../components/Footer";
 import LoginRegister from "../components/LoginRegister";
 import MobileMenu from "../components/MobileMenu";
 import CallToAction from "../components/CallToAction";
+import LostFoundItem from "../pages/LostFoundItem";
+
 // import $ from "jquery";
 import fire from "../firebase";
-import LostFoundItem from "./LostFoundItem";
-const LostFonuddatajson = [
+const lostfounddatajson = [
   { title: "suhas" },
   { title: "suhas1232342" },
   { title: "suasasdhas" },
@@ -18,15 +19,15 @@ const LostFonuddatajson = [
   { title: "suhas" },
 ];
 
-export class LostFound extends Component {
+export class lostfound extends Component {
   state = {
-    LostFound: [],
+    lostfound: [],
     loading: true,
     role:"",
   };
 
-  onnewLostFoundclick() {
-    this.props.history.push("NewLostFound");
+  onnewlostfoundclick() {
+    this.props.history.push("Newlostfound");
   }
 
   componentDidMount() {
@@ -59,37 +60,37 @@ export class LostFound extends Component {
         .collection("lostfound")
         .get()
         .then((querySnapshot) => {
-          var tempLostFound = [];
+          var templostfound = [];
           querySnapshot.forEach((doc) => {
             console.log(doc.data(), doc.id);
             let obj = doc.data();
             obj["id"] = doc.id;
-            tempLostFound.push(obj);
+            templostfound.push(obj);
           });
           
-          console.log("tempLostFound before sorting", tempLostFound);
-          tempLostFound = tempLostFound.sort((a, b) => b.time - a.time);
-          console.log("TempLostFound", tempLostFound);
+          console.log("templostfound before sorting", templostfound);
+          templostfound = templostfound.sort((a, b) => b.time - a.time);
+          console.log("Templostfound", templostfound);
           this.setState({
             loading: false,
-            lostfound: tempLostFound,
+            lostfound: templostfound,
             
           });
         });
 
-      console.log(" lost fetch complete");
+      console.log(" complains fetch complete");
     } else {
       this.props.history.replace("login");
     }
   }
 
   render() {
-    const LostFounddata = LostFonuddatajson;
-    var LostFoundHTML;
+    const lostfounddata = lostfounddatajson;
+    var lostfoundHTML;
     if (this.state.loading) {
-        LostFoundHTML = <div> Loading Please wait......</div>;
+      lostfoundHTML = <div> Loading Please wait......</div>;
     } else {
-        LostFoundHTML = (
+      lostfoundHTML = (
         <div
           className="container"
           style={{
@@ -99,8 +100,8 @@ export class LostFound extends Component {
           }}
         >
           <div className="row">
-            {this.state.LostFound.map((LostFound, key) => {
-              return <LostFoundItem key={key} LostFound={LostFound} />;
+            {this.state.lostfound.map((lostfound, key) => {
+              return <LostFoundItem key={key} lostfound={lostfound} />;
             })}
           </div>
           
@@ -121,7 +122,7 @@ export class LostFound extends Component {
           <button
             type="button"
             className="btn btn-outline-dark"
-            onClick={this.onnewLostFoundclick.bind(this)}
+            onClick={this.onnewlostfoundclick.bind(this)}
           >
             +
           </button>
@@ -189,9 +190,9 @@ export class LostFound extends Component {
             </div>
           </div>
         </div>
-        {LostFoundHTML}
+        {lostfoundHTML}
         {/* <BlogPage blog_type={'grid'} sidebar={false} sidebar_position={'left'}/> */}
-        <CallToAction />
+        {/* <CallToAction /> */}
         <Footer />
         <LoginRegister />
         <MobileMenu />
@@ -200,4 +201,4 @@ export class LostFound extends Component {
   }
 }
 
-export default LostFound;
+export default lostfound;

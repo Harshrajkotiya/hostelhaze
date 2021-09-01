@@ -4,7 +4,7 @@ import img from '../assets/img/hostelpic/T3.jpg'
 class StudentInfo extends Component {
   onstudentinfoclick() {
     console.log("hello");
-    this.props.history.replace("home-one");
+    this.props.history.replace("home");
   }
   render() {
     return (
@@ -16,6 +16,7 @@ class StudentInfo extends Component {
           marginTop: "30px",
           //width:"100%",
           border: "5px solid #151515",
+          
         }}
       >
         <form class="form-horizontal" role="form">
@@ -33,6 +34,7 @@ class StudentInfo extends Component {
             STUDENTINFO
           </div>
           <img src={img} style={{marginLeft:"500px",width:"150px"}}/>
+          <div style={{marginLeft:"50px"}}>
           <div class="form-group">
             
             <label for="firstName" class="col-sm-3 control-label">
@@ -176,7 +178,7 @@ class StudentInfo extends Component {
                 display: "flex",
                 justifyContent: "center",
                 marginBottom: "20px",
-                width: "50%",
+                width: "300px",
               }}
               onClick={this.onstudentinfoclick.bind(this)}
               type="submit"
@@ -186,8 +188,10 @@ class StudentInfo extends Component {
             </button>
             
           </div>
+          </div>
         </form>
       </div>
+
     );
   }
 }

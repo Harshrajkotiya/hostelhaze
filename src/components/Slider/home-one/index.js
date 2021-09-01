@@ -1,7 +1,6 @@
 import React from 'react';
 import SlickSlider from '../../UI/Slick'
 import SliderData from '../../../data/Slider/home-1'
-import {Link} from "react-router-dom";
 
 
 const NextArrow = ({className, onClick}) => {
@@ -47,7 +46,6 @@ const Slider = () => {
                                                 <div className="slider-content">
                                                     <h2 style={{marginLeft:"380px"}}>{item.title}</h2>
                                                     <p style={{marginLeft:"385px"}}>{item.text}</p>
-                                                    {/* <Link to={`${process.env.PUBLIC_URL + item.btnLink}`} className="btn btn-brand">{item.btnText}</Link> */}
                                                 </div>
                                             </div>
                                         </div>

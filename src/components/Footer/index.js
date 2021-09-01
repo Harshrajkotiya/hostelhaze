@@ -4,7 +4,6 @@ import Widget from "../UI/Widget";
 import List from "../UI/List";
 import LI from "../UI/List/Item";
 import { Link } from "react-router-dom";
-//import Logo from "../../assets/img/logo-dark.png";
 
 function Footer() {
   return (
@@ -14,9 +13,7 @@ function Footer() {
           <div className="col-lg-4 order-4 order-lg-0">
             <div className="widget-item">
               <div className="about-widget">
-                {/* <Link to={`${process.env.PUBLIC_URL + "/"}`}> */}
-                  {/* <img src={Logo} alt="Logo" /> */}
-                {/* </Link> */}
+                
 
                     <div 
                     style={{
@@ -61,9 +58,7 @@ function Footer() {
                     Contact us
                   </Link>
                 </LI>
-                  {/* <LI>
-                  <Link to={`${process.env.PUBLIC_URL + "/"}`}>Home</Link>
-                </LI> */}
+                  
               </List>
             </Widget>
           </div>
@@ -83,8 +78,7 @@ function Footer() {
                 </a>
                 </LI>
                 <br />
-                {/* <LI><Link to="https://twitter.com/hasthemes/" target={'_blank'}>Twitter</Link></LI> */}
-                {/* <LI><Link to="https://dribbble.com/hastech/" target={'_blank'}>Dribbble</Link></LI> */}
+                
                
               </List>
             </Widget>
@@ -94,7 +88,6 @@ function Footer() {
             <Widget title="Contact Us">
               <address>
                 L.E.collage(Diploma),Morbi <br />
-                {/* https://example.com <br/> */}
                 8733803586
               </address>
             </Widget>

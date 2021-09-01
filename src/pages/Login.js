@@ -24,7 +24,7 @@ class Login extends Component {
         var user = userCredential.user;
         console.log("User has Logged in", user);
         localStorage.setItem("user", JSON.stringify(user));
-        this.props.history.push("posts");
+        this.props.history.push("home");
         // ...
       })
       .catch((error) => {
@@ -55,7 +55,9 @@ class Login extends Component {
           style={{
             display: "flex",
             justifyContent: "center",
-            marginTop: "30px",
+            marginTop: "200px",
+            
+
           }}
         >
           <div className="log-in-content-wrap">
